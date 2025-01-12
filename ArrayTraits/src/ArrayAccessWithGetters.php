@@ -13,7 +13,7 @@ namespace DazzleSoftware\Toolbox\ArrayTraits;
  * Implements getters and setters.
  *
  * @package DazzleSoftware\Toolbox\ArrayTraits
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 trait ArrayAccessWithGetters

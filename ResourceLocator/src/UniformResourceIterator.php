@@ -17,7 +17,7 @@ use RuntimeException;
  * Implements FilesystemIterator for uniform resource locator.
  *
  * @package DazzleSoftware\Toolbox\ResourceLocator
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class UniformResourceIterator extends FilesystemIterator

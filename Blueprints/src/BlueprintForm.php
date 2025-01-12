@@ -25,7 +25,7 @@ use function is_string;
 /**
  * The Config class contains configuration information.
  *
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  */
 abstract class BlueprintForm implements ArrayAccess, ExportInterface
 {

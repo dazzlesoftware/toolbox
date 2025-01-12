@@ -12,7 +12,7 @@ namespace DazzleSoftware\Toolbox\Compat\Yaml\Exception;
 /**
  * Exception class thrown when an error occurs during parsing.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @author Dazzle Software <support@dazzlesoftware.org>
  */
 class ParseException extends RuntimeException
 {

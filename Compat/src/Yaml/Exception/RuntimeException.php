@@ -12,7 +12,7 @@ namespace DazzleSoftware\Toolbox\Compat\Yaml\Exception;
 /**
  * Exception class thrown when an error occurs during parsing.
  *
- * @author Romain Neutron <imprec@gmail.com>
+ * @author Dazzle Software <support@dazzlesoftware.org>
  */
 class RuntimeException extends \RuntimeException implements ExceptionInterface
 {

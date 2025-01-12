@@ -18,7 +18,7 @@ use Symfony\Component\Yaml\Yaml;
  * Implements ExportInterface.
  *
  * @package DazzleSoftware\Toolbox\ArrayTraits
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 trait Export

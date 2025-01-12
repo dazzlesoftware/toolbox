@@ -12,7 +12,7 @@ namespace DazzleSoftware\Toolbox\Compat\Yaml\Exception;
 /**
  * Exception interface for all exceptions thrown by the component.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @author Dazzle Software <support@dazzlesoftware.org>
  */
 interface ExceptionInterface
 {

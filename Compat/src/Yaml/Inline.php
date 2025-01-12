@@ -14,7 +14,7 @@ use DazzleSoftware\Toolbox\Compat\Yaml\Exception\ParseException;
 /**
  * Inline implements a YAML parser/dumper for the YAML inline syntax.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @author Dazzle Software <support@dazzlesoftware.org>
  */
 class Inline
 {

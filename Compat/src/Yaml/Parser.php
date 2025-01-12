@@ -14,7 +14,7 @@ use DazzleSoftware\Toolbox\Compat\Yaml\Exception\ParseException;
 /**
  * Parser parses YAML strings to convert them to PHP arrays.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @author Dazzle Software <support@dazzlesoftware.org>
  */
 class Parser
 {

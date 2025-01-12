@@ -18,7 +18,7 @@ use function is_string;
  * Implements Universal File Reader.
  *
  * @package DazzleSoftware\Toolbox\File
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 abstract class AbstractFile implements FileInterface

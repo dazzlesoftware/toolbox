@@ -19,7 +19,7 @@ use function is_object;
  * Implements Markdown File reader.
  *
  * @package DazzleSoftware\Toolbox\File
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class MarkdownFile extends File

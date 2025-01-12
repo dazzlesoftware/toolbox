@@ -13,7 +13,7 @@ namespace DazzleSoftware\Toolbox\Session;
  * Implements session messages.
  *
  * @package DazzleSoftware\Toolbox\Session
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class Message

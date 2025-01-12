@@ -15,7 +15,7 @@ use \Pimple\ServiceProviderInterface as BaseServiceProviderInterface;
  * Defines ServiceProviderInterface.
  *
  * @package DazzleSoftware\Toolbox\DI
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 interface ServiceProviderInterface extends BaseServiceProviderInterface

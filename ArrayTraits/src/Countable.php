@@ -15,7 +15,7 @@ use function count;
  * Implements \Countable interface.
  *
  * @package DazzleSoftware\Toolbox\ArrayTraits
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 trait Countable

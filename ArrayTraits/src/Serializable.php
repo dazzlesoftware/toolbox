@@ -13,7 +13,7 @@ namespace DazzleSoftware\Toolbox\ArrayTraits;
  * Implements \Serializable interface.
  *
  * @package DazzleSoftware\Toolbox\ArrayTraits
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 trait Serializable

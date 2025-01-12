@@ -13,7 +13,7 @@ namespace DazzleSoftware\Toolbox\StreamWrapper;
  * Defines Generic PHP stream wrapper interface.
  *
  * @package DazzleSoftware\Toolbox\StreamWrapper
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  *
  * @see http://www.php.net/manual/class.streamwrapper.php

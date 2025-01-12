@@ -17,7 +17,7 @@ use RuntimeException;
  * Implements Session handling.
  *
  * @package DazzleSoftware\Toolbox\Session
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class Session implements IteratorAggregate

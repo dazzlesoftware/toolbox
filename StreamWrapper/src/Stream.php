@@ -17,7 +17,7 @@ use function in_array;
  * Implements Read/Write Streams.
  *
  * @package DazzleSoftware\Toolbox\StreamWrapper
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class Stream implements StreamInterface

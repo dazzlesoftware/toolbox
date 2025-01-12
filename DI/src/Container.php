@@ -15,7 +15,7 @@ use Pimple\Container as BaseContainer;
  * Implements Dependency Injection Container.
  *
  * @package DazzleSoftware\Toolbox\DI
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class Container extends BaseContainer

@@ -15,7 +15,7 @@ use RuntimeException;
  * Implements Universal File Reader.
  *
  * @package DazzleSoftware\Toolbox\File
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class File extends AbstractFile

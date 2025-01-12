@@ -17,7 +17,7 @@ use function strlen;
  * Implements Gettext Mo File reader (readonly).
  *
  * @package DazzleSoftware\Toolbox\File
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class MoFile extends File

@@ -18,7 +18,7 @@ use function method_exists;
  * BlueprintSchema is used to define a data structure.
  *
  * @package DazzleSoftware\Toolbox\Blueprints
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class BlueprintSchema

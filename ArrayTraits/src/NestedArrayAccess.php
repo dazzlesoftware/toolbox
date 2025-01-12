@@ -16,7 +16,7 @@ use function is_object;
  * Implements nested ArrayAccess interface with dot notation.
  *
  * @package DazzleSoftware\Toolbox\ArrayTraits
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 trait NestedArrayAccess

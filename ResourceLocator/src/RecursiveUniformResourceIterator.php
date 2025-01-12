@@ -16,7 +16,7 @@ use RecursiveIterator;
  * Implements recursive iterator over filesystem.
  *
  * @package DazzleSoftware\Toolbox\ResourceLocator
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 class RecursiveUniformResourceIterator extends UniformResourceIterator implements RecursiveIterator

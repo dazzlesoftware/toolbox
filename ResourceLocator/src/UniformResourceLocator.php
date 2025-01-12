@@ -22,7 +22,7 @@ use function is_string;
  * Implements Uniform Resource Location.
  *
  * @package DazzleSoftware\Toolbox\ResourceLocator
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  *
  * @link http://webmozarts.com/2013/06/19/the-power-of-uniform-resource-location-in-php/

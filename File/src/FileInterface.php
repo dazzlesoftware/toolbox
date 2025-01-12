@@ -13,7 +13,7 @@ namespace DazzleSoftware\Toolbox\File;
  * Defines FileInterface.
  *
  * @package DazzleSoftware\Toolbox\File
- * @author Dazzle Software
+ * @author Dazzle Software <support@dazzlesoftware.org>
  * @license GNU/GPLv3
  */
 interface FileInterface
