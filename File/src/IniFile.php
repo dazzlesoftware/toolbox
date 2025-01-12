@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @package    Toolbox
+ *
+ * @copyright  (C) 2025 Dazzle Software, LLC. <https://www.dazzlesoftware.org>
+ * @license    GNU General Public License version 3 or later; see LICENSE.txt
+ */
+
+namespace DazzleSoftware\Toolbox\File;
+
+use RuntimeException;
+use function is_array;
+
+/**
+ * Implements INI File reader.
+ *
+ * @package DazzleSoftware\Toolbox\File
+ * @author Dazzle Software
+ * @license GNU/GPLv3
+ */
+class IniFile extends File
+{
+    /** @var string */
+    protected $extension = '.ini';
+
+    /** @var static[] */
+    static protected $instances = [];
+
+    /**
+     * @param array|null $var
+     * @return array
+     */
+    public function content($var = null)
+    {
+        /** @var array $content */
+        $content = parent::content($var);
+
+        return $content;
+    }
+
+    /**
+     * Check contents and make sure it is in correct format.
+     *
+     * @param mixed $var
+     * @return array
+     * @throws RuntimeException
+     */
+    protected function check($var)
+    {
+        if (!is_array($var)) {
+            throw new RuntimeException('Provided data is not an array');
+        }
+
+        return $var;
+    }
+
+    /**
+     * Encode configuration object into RAW string (INI).
+     *
+     * @param array $var
+     * @return string
+     */
+    protected function encode($var)
+    {
+        $string = '';
+        foreach ($var as $key => $value) {
+            $string .= $key . '="' .  preg_replace(
+                    ['/"/', '/\\\/', "/\t/", "/\n/", "/\r/"],
+                    ['\"',  '\\\\', '\t',   '\n',   '\r'],
+                    $value
+                ) . "\"\n";
+        }
+
+        return $string;
+    }
+
+    /**
+     * Decode INI file into contents.
+     *
+     * @param string $var
+     * @return array
+     * @throws RuntimeException
+     */
+    protected function decode($var)
+    {
+        $decoded = null !== $this->filename && file_exists($this->filename) ? @parse_ini_file($this->filename) : [];
+
+        if ($decoded === false) {
+            throw new RuntimeException("Decoding file '{$this->filename}' failed'");
+        }
+
+        return $decoded;
+    }
+}
