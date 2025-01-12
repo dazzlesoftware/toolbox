@@ -3,7 +3,6 @@
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
 [![Latest Version](http://img.shields.io/packagist/v/dazzlesoftware/toolbox.svg?style=flat)](https://packagist.org/packages/dazzlesoftware/toolbox)
 [![Software License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](LICENSE)
-[![Build Status](https://img.shields.io/travis/dazzlesoftware/toolbox/master.svg?style=flat)](https://travis-ci.org/dazzlesoftware/toolbox)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/dazzlesoftware/toolbox.svg?style=flat)](https://scrutinizer-ci.com/g/dazzlesoftware/toolbox/code-structure)
 [![Quality Score](https://img.shields.io/scrutinizer/g/dazzlesoftware/toolbox.svg?style=flat)](https://scrutinizer-ci.com/g/dazzlesoftware/toolbox)
 [![Total Downloads](https://img.shields.io/packagist/dt/dazzlesoftware/toolbox.svg?style=flat)](https://packagist.org/packages/dazzlesoftware/toolbox)
