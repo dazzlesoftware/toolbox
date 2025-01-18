@@ -27,12 +27,11 @@ class EventDispatcher extends BaseEventDispatcher
      * @param BaseEvent|null $event
      * @return BaseEvent|null
      */
-    public function dispatch($eventName, BaseEvent $event = null)
+	public function dispatch(object $event, ?string $eventName = null): object
     {
-        if (null === $event) {
-            $event = new Event();
+        if (null === $eventName && method_exists($event, 'getName')) {
+            $eventName = $event->getName();
         }
-
-        return parent::dispatch($eventName, $event);
+        return parent::dispatch($event, $eventName);
     }
 }
