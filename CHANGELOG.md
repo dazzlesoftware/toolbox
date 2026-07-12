@@ -22,7 +22,7 @@
 ## 03/24/2023
 
 1. [](#bugfix)
-    * Fixed an issue with PHP 8.2 [#36](https://github.com/rockettheme/toolbox/pull/36)
+    * Fixed an issue with PHP 8.2 [#36](https://github.com/dazzlesoftware/toolbox/pull/36)
 
 # v1.6.3
 ## 02/19/2023
@@ -34,7 +34,7 @@
 ## 06/14/2022
 
 1. [](#bugfix)
-    * Removed support for Symfony 5 Event Dispatcher due to compatibility issues [#32](https://github.com/rockettheme/toolbox/issues/32)
+    * Removed support for Symfony 5 Event Dispatcher due to compatibility issues [#32](https://github.com/dazzlesoftware/toolbox/issues/32)
 
 # v1.6.1
 ## 02/08/2022
