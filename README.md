@@ -7,8 +7,12 @@ DazzleSoftware\Toolbox package contains a set of reusable PHP interfaces, classe
 * DI
 * File
 * ResourceLocator
-* Session
+* Session message queue
 * StreamWrapper
+
+The package requires PHP 8.3 or newer. YAML parsing is provided exclusively by
+Symfony YAML; the legacy compatibility parser and deprecated event adapter have
+been removed. Gantry uses Symfony EventDispatcher directly.
 
 ## Installation
 
@@ -16,11 +20,11 @@ You can use [Composer](http://getcomposer.org/) to download and install this pac
 
 ### Composer
 
-To add this package as a local, per-project dependency to your project, simply add a dependency on `rockettheme/toolbox` to your project's `composer.json` file. Here is a minimal example of a `composer.json` file that just defines a dependency on Diff:
+To add this package as a local, per-project dependency, require `dazzlesoftware/toolbox` in your project's `composer.json`:
 
     {
         "require": {
-            "dazzlesoftware/toolbox": "^1.5"
+            "dazzlesoftware/toolbox": "^2.0"
         }
     }
 

@@ -12,7 +12,7 @@ class UniformResourceLocatorTest extends TestCase
      */
     static protected $locator;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         // Share locator in all tests.
         self::$locator = new UniformResourceLocator(__DIR__ . '/data');
@@ -41,7 +41,7 @@ class UniformResourceLocatorTest extends TestCase
         $this->assertTrue($locator->schemeExists($scheme));
     }
 
-    public function addPathProvider() {
+    public static function addPathProvider(): array {
         return [
             ['base', '', 'base'],
             ['local', '', 'local'],
@@ -73,7 +73,7 @@ class UniformResourceLocatorTest extends TestCase
     }
 
 
-    public function getPathsProvider() {
+    public static function getPathsProvider(): array {
         return [
             ['base', ['' => ['base']]],
             ['local', ['' => ['local']]],
@@ -193,7 +193,7 @@ class UniformResourceLocatorTest extends TestCase
     }
 
 
-    public function normalizeProvider() {
+    public static function normalizeProvider(): array {
         return [
             ['', ''],
             ['./', ''],
@@ -228,7 +228,7 @@ class UniformResourceLocatorTest extends TestCase
 
         ];
     }
-    public function findResourcesProvider() {
+    public static function findResourcesProvider(): array {
         return [
             ['all://base.txt', ['base/all/base.txt']],
             ['all://base_all.txt', ['override/all/base_all.txt', 'local/all/base_all.txt', 'base/all/base_all.txt']],

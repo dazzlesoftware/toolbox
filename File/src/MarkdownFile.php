@@ -2,9 +2,7 @@
 
 namespace DazzleSoftware\Toolbox\File;
 
-use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml as YamlParser;
-use DazzleSoftware\Toolbox\Compat\Yaml\Yaml as FallbackYamlParser;
 use function is_array;
 use function is_object;
 
@@ -169,14 +167,7 @@ class MarkdownFile extends File
 
             if ($content['header'] === false) {
                 // YAML hasn't been parsed yet (error or extension isn't available). Fall back to Symfony parser.
-                try {
-                    $content['header'] = (array) YamlParser::parse($frontmatter);
-                } catch (ParseException $e) {
-                    if (!$this->setting('compat', true)) {
-                        throw $e;
-                    }
-                    $content['header'] = (array) FallbackYamlParser::parse($frontmatter);
-                }
+                $content['header'] = (array) YamlParser::parse($frontmatter);
             }
             $content['markdown'] = $m[2];
         } else {

@@ -3,9 +3,7 @@
 namespace DazzleSoftware\Toolbox\File;
 
 use Symfony\Component\Yaml\Exception\DumpException;
-use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml as YamlParser;
-use DazzleSoftware\Toolbox\Compat\Yaml\Yaml as FallbackYamlParser;
 use function function_exists;
 use function is_array;
 use function is_object;
@@ -23,7 +21,6 @@ class YamlFile extends File
     static protected $instances = [];
     /** @var array */
     static protected $globalSettings = [
-        'compat' => true,
         'native' => true
     ];
 
@@ -128,7 +125,7 @@ class YamlFile extends File
      *
      * @param string $var
      * @return array
-     * @throws ParseException
+     * @throws \Symfony\Component\Yaml\Exception\ParseException
      */
     protected function decode($var)
     {
@@ -147,14 +144,6 @@ class YamlFile extends File
             }
         }
 
-        try {
-            return (array)YamlParser::parse($var);
-        } catch (ParseException $e) {
-            if ($this->setting('compat', true)) {
-                return (array)FallbackYamlParser::parse($var);
-            }
-
-            throw $e;
-        }
+        return (array)YamlParser::parse($var);
     }
 }
