@@ -618,7 +618,7 @@ class BlueprintSchema
         }
 
         foreach ($properties as $name => $value) {
-            if (is_string($name) && strpos($name[0], '@') !== false) {
+            if (is_string($name) && str_ends_with($name, '@')) {
                 $list = explode('-', trim($name, '@'), 2);
                 $action = array_shift($list);
                 $property = array_shift($list);

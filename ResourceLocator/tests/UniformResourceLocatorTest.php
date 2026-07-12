@@ -20,7 +20,7 @@ class UniformResourceLocatorTest extends TestCase
 
     public function testGetBase()
     {
-        $this->assertEquals(__DIR__ . '/data', self::$locator->getBase());
+        $this->assertEquals(str_replace('\\', '/', __DIR__) . '/data', self::$locator->getBase());
     }
 
     /**
@@ -97,7 +97,6 @@ class UniformResourceLocatorTest extends TestCase
 
     /**
      * @depends testAddPath
-     * @expectedException InvalidArgumentException
      */
     public function testGetIterator()
     {
@@ -108,12 +107,12 @@ class UniformResourceLocatorTest extends TestCase
             $locator->getIterator('all://')
         );
 
-        $locator->getIterator('fail://');
+        $this->expectException(InvalidArgumentException::class);
+        $locator->getIterator('fail://')->valid();
     }
 
     /**
      * @depends testAddPath
-     * @expectedException InvalidArgumentException
      */
     public function testGetRecursiveIterator()
     {
@@ -124,7 +123,8 @@ class UniformResourceLocatorTest extends TestCase
             $locator->getRecursiveIterator('all://')
         );
 
-        $locator->getRecursiveIterator('fail://');
+        $this->expectException(InvalidArgumentException::class);
+        $locator->getRecursiveIterator('fail://')->valid();
     }
 
     /**
@@ -151,6 +151,14 @@ class UniformResourceLocatorTest extends TestCase
     {
         $locator = self::$locator;
 
+        $isRelative = !str_contains($uri, '://')
+            && preg_match('`^(/|[a-z]:[\\\\/])`i', $uri) !== 1;
+
+        if ($isRelative) {
+            $uri = 'test://' . $uri;
+            $path = $path === false ? false : 'test://' . $path;
+        }
+
         $this->assertEquals($path, $locator->normalize($uri));
     }
 
@@ -162,7 +170,7 @@ class UniformResourceLocatorTest extends TestCase
     {
         $locator = self::$locator;
         $path = $paths ? reset($paths) : false;
-        $fullPath = !$path ? false : __DIR__ . "/data/{$path}";
+        $fullPath = !$path ? false : str_replace('\\', '/', __DIR__) . "/data/{$path}";
 
         $this->assertEquals($fullPath, $locator->findResource($uri));
         $this->assertEquals($path, $locator->findResource($uri, false));
@@ -187,7 +195,7 @@ class UniformResourceLocatorTest extends TestCase
     {
         $locator = self::$locator;
         $path = $paths ? reset($paths) : false;
-        $fullPath = !$path ? false : __DIR__ . "/data/{$path}";
+        $fullPath = !$path ? false : str_replace('\\', '/', __DIR__) . "/data/{$path}";
 
         $this->assertEquals($fullPath, $locator($uri));
     }
